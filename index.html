@@ -9,19 +9,26 @@
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
-<body class="bg-light">
-    <div class="homePage container-fluid p-2 p-sm-3 px-lg-5 py-lg-4">
-        <aside class="sidebarMenu bg-primary rounded-3 d-none d-lg-flex text-center py-3">
+<body>
+    <div class="homePage container-fluid py-3">
+        <aside class="sidebarMenu bg-primary rounded-3 d-lg-flex text-center py-3 ms-lg-3 ms-xl-5 position-relative">
             <div class="menuBtn">
                 <div class="logo">
                     <img src="assets/Brand Logo.svg" alt="">
                 </div>
-                <img src="assets/Icon.png" id="btn" alt="" style="cursor:pointer">
+                <img src="assets/Icon.png" id="btn" alt="" style="cursor:pointer" class="right-menu">
+                <img src="assets/Left.png" alt="" id="btn2" style="cursor:pointer" class="left-menu d-none float-end">
+                <div id="closeBtn" class="d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                </div>
             </div>
             <div class="sidebar">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="index.html">
                             <img src="assets/Home.png" alt="">
                             <span class="nav-item">Home</span>
                         </a>
@@ -65,10 +72,184 @@
                 </ul>
             </div>
             <div class="premiumBtn">
-                <img src="assets/Object.png" alt="">
+                <img src="assets/Light.png" alt="" class="max d-none">
+                <img src="assets/Object.png" alt="" class="min">
             </div>
         </aside>
-        <main class="main-content py-md-4 px-2 px-sm-2 px-lg-0">
+        <main class="main-content container-fluid py-3 py-lg-0 px-3 px-lg-0">
+            <header class="mx-lg-4 mx-xl-5">
+                <div class="headerWrap d-flex align-items-center justify-content-between justify-content-lg-end p-sm-0">
+                    <a href="" class="d-lg-none" id="menuBtn">
+                        <img src="assets/Icon.png" alt="">
+                    </a>
+
+                    <div class="menu d-flex gap-3 gap-lg-4 align-items-center ">
+                        <a href="" class="partner text-decoration-none">
+                            <span><img src="assets/Icon-Add.png" alt=""></span>
+                            <p class="d-none d-sm-inline mx-1">Become Partner</p>
+                            <span class="d-none d-sm-inline"><img src="assets/Down.png" alt=""></span>
+                        </a>
+                        <a href="" class="user-menu text-decoration-none">
+                            <span><img src="assets/Image.png" alt=""></span>
+                            <p class="d-none d-sm-inline mx-1">Mansurul Haque</p>
+                            <span class="d-none d-sm-inline"><img src="assets/Down.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <section class="searchForm mx-lg-4 mx-xl-5">
+                <div class="navMenu d-flex justify-content-around justify-content-sm-start p-0">
+                    <a href="#" class="navMenu-item text-center text-white text-decoration-none py-3 me-sm-4 me-lg-5">
+                        <img src="assets/Plane.png" class="mb-2" alt="">
+                        <p class="text-uppercase mb-0">Flights</p>
+                    </a>
+                    <a href="hotels.html" target="_blank"
+                        class="navMenu-item text-center text-white text-decoration-none  py-3 me-sm-4 me-lg-5">
+                        <img src="assets/Hotel.png" class="mb-2" alt="">
+                        <p class="text-uppercase mb-0">Hotel</p>
+                    </a>
+                    <a href="#" class="navMenu-item text-center text-white text-decoration-none py-3  me-sm-4 me-lg-5">
+                        <img src="assets/Villa.png" class="mb-2" alt="">
+                        <p class="text-uppercase mb-0">Villa</p>
+                    </a>
+                    <a href="#" class="navMenu-item text-center text-white text-decoration-none  py-3 me-sm-4 me-lg-5">
+                        <img src="assets/Texi.png" class="mb-2" alt="">
+                        <p class="text-uppercase mb-0">Taxi</p>
+                    </a>
+                </div>
+
+                <div class="heroSearchForm bg-white p-3 mt-3">
+                    <div class="row">
+                        <form action="">
+                            <div class="d-md-flex flex-md-row gap-md-3 gap-xl-4">
+                                <div class="form-floating col-md mb-3">
+                                    <select class="form-select bg-light pt-2 ps-3" id="floatingSelect">
+                                        <option selected>Dhaka, Bangladesh</option>
+                                    </select>
+                                    <label for="floatingSelect" class="text-uppercase text-gray">
+                                        <span><img src="assets/Geo.png" alt=""></span>
+                                        From
+                                    </label>
+                                    <small>Usmani Airport, Sylhet</small>
+                                </div>
+
+                                <div class="form-floating col-md mb-3">
+                                    <select class="form-select bg-light pt-2 ps-3" id="floatingSelect">
+                                        <option selected>21 Aug'19</option>
+                                    </select>
+                                    <label for="floatingSelect" class="text-uppercase">
+                                        <span><img src="assets/Geo.png" alt=""></span>
+                                        Check in-out
+                                    </label>
+                                    <small>Sunday</small>
+                                </div>
+
+                                <div class="form-floating col-md mb-3">
+                                    <select class="form-select bg-light pt-2 ps-3" id="floatingSelect">
+                                        <option selected>3 adult - 1 children - 2 room</option>
+                                    </select>
+                                    <label for="floatingSelect" class="text-uppercase">
+                                        <span><img src="assets/Seat.png" alt=""></span>
+                                        To
+                                    </label>
+                                    <small>Person</small>
+                                </div>
+                            </div>
+
+                            <div class="d-md-flex flex-md-row justify-content-between">
+                                <div class="d-flex flex-column flex-sm-row gap-sm-3 align-items-sm-end">
+                                    <div class="form-floating mb-3 mb-md-0 col-sm-6 col-md-8">
+                                        <select class="form-select bg-light pt-2 ps-3" id="floatingSelect">
+                                            <option selected>More</option>
+                                        </select>
+                                        <label for="floatingSelect" class="text-uppercase text-gray">
+                                            Return
+                                        </label>
+                                        <small>...</small>
+                                    </div>
+
+                                    <div class="mb-3 form-check col-sm-8">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">I'm
+                                            travelling
+                                            for work</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-danger text-uppercase fw-bold px-3 px-md-5">Search
+                                    Flight</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="packages mt-5 ms-lg-4 ms-xl-5">
+                <div class="px-0">
+                    <div class="d-flex justify-content-between align-items-center p-0 me-xl-5 me-md-4 me-lg-3">
+                        <h3>Trip Package</h3>
+                        <a href="#" class="text-decoration-none me-lg-5 me-xl-4 pe-xl-1">View All</a>
+                    </div>
+                    <div class="container mt-2 mx-0 px-0">
+                        <div class="packageWrap mt-3">
+                            <div class="packageCard card-1">
+                                <div class="cardImg">
+                                    <img src="assets/package1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="packageCard card-2">
+                                <div class="cardImg">
+                                    <img src="assets/package2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="packageCard card-3">
+                                <div class="cardImg">
+                                    <img src="assets/package3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="packageCard card-1">
+                                <div class="cardImg">
+                                    <img src="assets/package1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="packageCard card-3">
+                                <div class="cardImg">
+                                    <img src="assets/package3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+
+            <section class="bestOffer my-5 mx-lg-4 mx-xl-5">
+                <div class="bestOfferWrap bg-white p-3 p-md-4 p-xl-5 py-xl-4">
+                    <div class="titleWrap d-flex justify-content-between align-items-center mb-2">
+                        <h3>Best Offer</h3>
+                        <a href="#" class="text-decoration-none">View All</a>
+                    </div>
+                    <div class="container mt-4 py-2">
+                        <div class="row pb-3" id="contentContainer"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dealsBanner mx-lg-4 mx-xl-5">
+                <div class="bannerWrap rounded-3 mb-5">
+                    <div
+                        class="bannerContent d-flex flex-column flex-md-row align-items-md-center justify-content-md-between">
+                        <div class="dealText  col p-3 p-md-5 pe-0">
+                            <h3 class="deals">Book Your Perfect Deals</h3>
+                            <h1 class="price mt-3">$547<span class="text-uppercase">Starting at</span></h1>
+                        </div>
+                        <div class="col p-3 p-md-5 text-md-end">
+                            <button type="submit">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- <main class="main-content py-md-4 px-2 px-sm-2 px-lg-0">
             <header>
                 <div
                     class="headerWrap pt-3 d-flex align-items-center justify-content-between justify-content-lg-end p-sm-0">
@@ -252,7 +433,7 @@
                     </div>
                 </div>
             </section>
-        </main>
+        </main> -->
     </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
